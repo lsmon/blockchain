@@ -2,8 +2,8 @@
 // Created by Salomon Lee on 4/30/19.
 //
 
-#ifndef PROJECT_CUDA_CONFIG_H
-#define PROJECT_CUDA_CONFIG_H
+#ifndef BLOCKCHAIN_CONFIG_CUH
+#define BLOCKCHAIN_CONFIG_CUH
 
 #define CUDA_ENABLED @CUDA_ENABLED@
 #define DEBUG_LOG @DEBUG_LOG@
@@ -35,7 +35,9 @@ extern __cuda_fake_struct blockIdx;
 //#include <dynlink_cuda.h>
 #include <host_defines.h>
 #include <vector_types.h>
+#include <sha_functions.h>
 
+using namespace std;
 
 template<typename T>
 void check(T err, const char* const func, const char* const file, const int line) {
@@ -45,4 +47,4 @@ void check(T err, const char* const func, const char* const file, const int line
     }
 }
 #endif
-#endif //PROJECT_CONFIG_H
+#endif //BLOCKCHAIN_CONFIG_CUH

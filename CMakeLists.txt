@@ -18,12 +18,13 @@ if (CUDA_FOUND)
         include(cmake/cuda/source.cmake)
 else (CUDA_FOUND)
         include(cmake/cpp/source.cmake)
+        include(cmake/cpp/settings.cmake)
         add_executable(blockchain
                 ${COMMON_INC}
                 ${COMMON_SRC}
                 ${CPP_BLOCKCHAIN_INC}
                 ${CPP_BLOCKCHAIN_SRC}
-                ${CPP_SRC_PATH}/main.cpp src/common/logger.cpp)
+                ${CPP_SRC_PATH}/main.cpp)
 endif (CUDA_FOUND)
 
 

@@ -1,15 +1,11 @@
 //
-// Created by Salomon Lee on 4/30/19.
+// Created by Salomon Lee on 5/1/19.
 //
 
-#ifndef BLOCKCHAIN_SHA256_H
-#define BLOCKCHAIN_SHA256_H
+#ifndef BLOCKCHAIN_SHA256_CUH
+#define BLOCKCHAIN_SHA256_CUH
 
-#include <config.h>
-
-using namespace std;
-
-string SHA256(string input);
+#include <config.cuh>
 
 class sha256 {
 protected:
@@ -32,4 +28,4 @@ protected:
     uint32 m_h[8];
 };
 
-#endif //BLOCKCHAIN_SHA256_H
+#endif //BLOCKCHAIN_SHA256_CUH

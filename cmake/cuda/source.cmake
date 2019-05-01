@@ -1,0 +1,15 @@
+set(CUDA_INC_PATH ${PROJECT_SOURCE_DIR}/inc/cuda)
+set(CUDA_SRC_PATH ${PROJECT_SOURCE_DIR}/src/cuda)
+
+set(CUDA_BLOCKCHAIN_INC ${CUDA_INC_PATH}/sha256.cuh)
+set(CUDA_BLOCKCHAIN_SRC ${CUDA_SRC_PATH}/sha256.cu)
+
+include_directories(CUDA_DIRECTORIES
+        ${CUDA_INC_PATH}
+        ${CUDA_SRC_PATH}
+        ${PROJECT_BINARY_DIR})
+
+link_directories(${CUDA_DIRECTORIES})
+
+message(INFO " -- CUDA_BLOCKCHAIN_INC:          ${CUDA_BLOCKCHAIN_INC}")
+message(INFO " -- CUDA_BLOCKCHAIN_SRC:          ${CUDA_BLOCKCHAIN_SRC}")

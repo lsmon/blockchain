@@ -1,8 +1,8 @@
 include(FindCUDA)
 
 configure_file(
-        ${PROJECT_SOURCE_DIR}/inc/cuda/cuda_config.h
-        ${PROJECT_BINARY_DIR}/inc/cuda/cuda_config.h)
+        ${PROJECT_SOURCE_DIR}/inc/cuda/config.cuh
+        ${PROJECT_BINARY_DIR}/inc/cuda/config.cuh)
 
 set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS}
         -gencode arch=compute_30,code=sm_30
