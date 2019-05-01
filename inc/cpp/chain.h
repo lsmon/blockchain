@@ -15,12 +15,12 @@ public:
     chain();
 
     void add_block(block new_block);
+    vector<block> get_chain();
+    block get_last_block() const;
 
 private:
     uint32_t _difficulty;
     vector<block> _chain;
-
-    block _get_last_block() const;
 };
 
 

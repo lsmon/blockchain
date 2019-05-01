@@ -7,8 +7,6 @@
 
 #include <config.h>
 
-using namespace std;
-
 string SHA256(string input);
 
 class sha256 {

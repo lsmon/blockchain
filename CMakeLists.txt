@@ -24,7 +24,7 @@ else (CUDA_FOUND)
                 ${COMMON_SRC}
                 ${CPP_BLOCKCHAIN_INC}
                 ${CPP_BLOCKCHAIN_SRC}
-                ${CPP_SRC_PATH}/main.cpp)
+                main.cpp)
 endif (CUDA_FOUND)
 
 

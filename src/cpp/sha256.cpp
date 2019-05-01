@@ -6,9 +6,9 @@
 #include <cstring>
 
 void sha256::transform(const unsigned char *message, unsigned int block_nb) {
-    uint32 w[64];
-    uint32 wv[8];
-    uint32 t1, t2;
+    unsigned int w[64];
+    unsigned int wv[8];
+    unsigned int t1, t2;
     const unsigned char *sub_block;
     int i;
     int j;
