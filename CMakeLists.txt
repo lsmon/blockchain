@@ -13,6 +13,8 @@ find_package(CUDA)
 set(DEBUG_LOG true)
 set(CUDA_ENABLED true)
 
+#set(CUDA_FOUND false)
+
 if (CUDA_FOUND)
         include(cmake/cuda/settings.cmake)
         include(cmake/cuda/source.cmake)

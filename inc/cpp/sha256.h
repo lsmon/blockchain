@@ -10,17 +10,10 @@
 string SHA256(string input);
 
 class sha256 {
-protected:
-    typedef unsigned char uint8;
-    typedef unsigned int uint32;
-    typedef unsigned long long uint64;
-
-    static const unsigned int SHA224_256_BLOCK_SIZE = (512/8);
 public:
     void init();
     void update(const unsigned char *message, unsigned int len);
     void final(unsigned char *digest);
-    static const unsigned int DIGEST_SIZE = ( 256 / 8);
 
 protected:
     void transform(const unsigned char *message, unsigned int block_nb);

@@ -1,8 +1,10 @@
 include(FindCUDA)
 
-configure_file(
+set(CUDA_CONFIG_CUH
         ${PROJECT_SOURCE_DIR}/inc/cuda/config.cuh
         ${PROJECT_BINARY_DIR}/inc/cuda/config.cuh)
+
+configure_file(${CUDA_CONFIG_CUH})
 
 set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS}
         -gencode arch=compute_30,code=sm_30
@@ -21,7 +23,7 @@ message(INFO " -- CUDA:                         FOUND")
 message(INFO " -- CUDA VERSION:                 ${CUDA_VERSION}")
 message(INFO " -- DEBUGGING LOGS:               ${DEBUG_LOG}")
 message(INFO " -- CUDA_ENABLED:                 ${CUDA_ENABLED}")
-message(INFO " -- CUDA CONFIG HEADER:           ${CUDA_CONFIG_H}")
+message(INFO " -- CUDA CONFIG HEADER:           ${CUDA_CONFIG_CUH}")
 message(INFO " -- NVENC LIBRARY:                ${NVENC_LIBS}")
 message(INFO " -- CUDA TOOLKIT:                 ${CUDA_TOOLKIT}")
 message(INFO " -- CUDA LIBRARY:                 ${CUDA_LIBS}")

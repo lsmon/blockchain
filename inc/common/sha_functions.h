@@ -47,4 +47,12 @@ const unsigned int sha256_k[64] = //UL = uint32
          0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,
          0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2};
 
+
+typedef unsigned char uint8;
+typedef unsigned int uint32;
+typedef unsigned long long uint64;
+
+static const unsigned int SHA224_256_BLOCK_SIZE = (512/8);
+static const unsigned int SHA_DIGEST_SIZE = ( 256 / 8);
+
 #endif //BLOCKCHAIN_SHAFUNCTIONS_H

@@ -96,17 +96,17 @@ void sha256::final(unsigned char *digest) {
 }
 
 string SHA256(string input) {
-    unsigned char digest[sha256::DIGEST_SIZE];
-    memset(digest,0,sha256::DIGEST_SIZE);
+    unsigned char digest[SHA_DIGEST_SIZE];
+    memset(digest,0,SHA_DIGEST_SIZE);
 
     sha256 ctx = sha256();
     ctx.init();
     ctx.update( (unsigned char*)input.c_str(), input.length());
     ctx.final(digest);
 
-    char buf[2*sha256::DIGEST_SIZE+1];
-    buf[2*sha256::DIGEST_SIZE] = 0;
-    for (int i = 0; i < sha256::DIGEST_SIZE; i++)
+    char buf[2*SHA_DIGEST_SIZE+1];
+    buf[2*SHA_DIGEST_SIZE] = 0;
+    for (int i = 0; i < SHA_DIGEST_SIZE; i++)
         sprintf(buf+i*2, "%02x", digest[i]);
     return std::string(buf);
 }

@@ -39,11 +39,6 @@ string to_string(T value) {
     return ss.str();
 }
 
-#define CUDA_ENABLED @CUDA_ENABLED@
 #define DEBUG_LOG @DEBUG_LOG@
-
-#ifdef CUDA_ENABLED
-#include <inc/cuda/config.h>
-#endif
 
 #endif //PROJECT_CONFIG_H

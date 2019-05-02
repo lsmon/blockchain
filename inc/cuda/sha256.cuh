@@ -7,18 +7,13 @@
 
 #include <config.cuh>
 
-class sha256 {
-protected:
-    typedef unsigned char uint8;
-    typedef unsigned int uint32;
-    typedef unsigned long long uint64;
+string SHA256(string input);
 
-    static const unsigned int SHA224_256_BLOCK_SIZE = (512/8);
+class sha256 {
 public:
     void init();
-    void update(const unsigned char *message, unsigned int len);
-    void final(unsigned char *digest);
-    static const unsigned int DIGEST_SIZE = ( 256 / 8);
+    void update(const uint8 *message, uint32 len);
+    void final(uint8 *digest);
 
 protected:
     void transform(const unsigned char *message, unsigned int block_nb);
