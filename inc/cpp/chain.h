@@ -5,7 +5,7 @@
 #ifndef BLOCKCHAIN_CHAIN_H
 #define BLOCKCHAIN_CHAIN_H
 
-#include <config.h>
+#include <inc/config.h>
 #include <block.h>
 
 using namespace std;

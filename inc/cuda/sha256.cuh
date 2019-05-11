@@ -5,8 +5,6 @@
 #ifndef BLOCKCHAIN_SHA256_CUH
 #define BLOCKCHAIN_SHA256_CUH
 
-#include <config.h>
-
 
 
 #endif //BLOCKCHAIN_SHA256_CUH

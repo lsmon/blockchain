@@ -5,7 +5,9 @@
 #ifndef BLOCKCHAIN_SHA256_H
 #define BLOCKCHAIN_SHA256_H
 
-#include <config.h>
+#include <inc/config.h>
+
+using namespace std;
 
 string SHA256(string input);
 

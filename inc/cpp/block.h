@@ -5,7 +5,7 @@
 #ifndef BLOCKCHAIN_BLOCK_H
 #define BLOCKCHAIN_BLOCK_H
 
-#include <config.h>
+#include <inc/config.h>
 #include <sha256.h>
 
 using namespace std;

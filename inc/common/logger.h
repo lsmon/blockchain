@@ -5,9 +5,9 @@
 #ifndef BLOCKCHAIN_LOGGER_H
 #define BLOCKCHAIN_LOGGER_H
 
-#include <config.h>
+#include <inc/config.h>
 
-#define DEBUG_LOG @DEBUG_LOG@
+using namespace std;
 
 enum level {
     log_info,
