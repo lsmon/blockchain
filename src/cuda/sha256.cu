@@ -4,4 +4,3 @@
 
 #include <sha256.cuh>
 
-void sha256::transform(const unsigned char *message, uint32 )

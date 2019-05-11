@@ -30,6 +30,44 @@
 #include <vector>
 #include <sha_functions.h>
 
+#define CUDA_ENABLED @CUDA_ENABLED@
+#define DEBUG_LOG @DEBUG_LOG@
+
+#ifndef CUDA_ENABLED
+#ifdef __JETBRAINS_IDE__
+#define __CUDACC__ 1
+#define __host__
+#define __device__
+#define __global__
+#define __forceinline__
+#define __shared__
+inline void __syncthreads() {}
+inline void __threadfence_block() {}
+template<class T> inline T __clz(const T val) { return val; }
+struct __cuda_fake_struct { int x; int y; int z; };
+extern __cuda_fake_struct blockDim;
+extern __cuda_fake_struct threadIdx;
+extern __cuda_fake_struct blockIdx;
+#endif
+
+#include <driver_types.h>
+#include <builtin_types.h>
+#include <cuda_runtime.h>
+#include <cuda_runtime_api.h>
+#include <device_launch_parameters.h>
+#include <driver_types.h>
+#include <host_defines.h>
+#include <vector_types.h>
+
+template<typename T>
+void check(T err, const char* const func, const char* const file, const int line) {
+    if (err != cudaSuccess) {
+        std::cerr << "CUDA error in: " << file << " at " << func << ":" << line << std::endl;
+        exit(1);
+    }
+}
+#endif
+
 using namespace std;
 
 template <typename T>
@@ -38,7 +76,5 @@ string to_string(T value) {
     ss << value;
     return ss.str();
 }
-
-#define DEBUG_LOG @DEBUG_LOG@
 
 #endif //PROJECT_CONFIG_H
